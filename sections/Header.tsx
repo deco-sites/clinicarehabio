@@ -48,11 +48,10 @@ export default function Header({
 
       {/* main content */}
       <div class="drawer-content container lg:px-0 px-4 flex gap-8 items-center justify-between py-4">
-        <a href="/">
-          <Image src={logo.src || ""} width={100} height={28} alt={logo.alt} />
-        </a>
-
         <div class="hidden items-center justify-between lg:flex w-full">
+          <a href="/">
+            <Image src={logo.src || ""} width={100} height={60} alt={logo.alt} fit='contain'  />
+            </a>
           <ul class="flex">
             {navigation.links.map((link) => (
               <li>
@@ -66,6 +65,7 @@ export default function Header({
               </li>
             ))}
           </ul>
+        
           <ul class="flex gap-3">
             {navigation.buttons?.map((item) => (
               <a
@@ -82,6 +82,7 @@ export default function Header({
             ))}
           </ul>
         </div>
+
 
         <label
           htmlFor="mobile-drawer-nav"
